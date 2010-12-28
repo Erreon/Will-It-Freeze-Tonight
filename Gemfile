@@ -1,5 +1,5 @@
 source :rubygems
 
-gem 'erb'
+gem 'erubis'
 gem 'sinatra'
 gem 'google-weather'
