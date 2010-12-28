@@ -1,13 +1,10 @@
 require 'sinatra'
 require 'google_weather'
-require 'haml'
-require 'pp'
-
-set :haml, :format => :html5
+require 'erb'
 
 get '/' do
   @title = "WillItFreezeTonight.com"
-  haml :index
+  erb :index
 end
 
 post '/weather' do
@@ -29,9 +26,9 @@ post '/weather' do
     @title = "No"
     @answer = 'No'
   end
-  haml :weather
+  erb :weather
 end
 
 get '/weather' do
-  haml :weather
+ redirect '/'
 end

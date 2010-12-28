@@ -1,5 +1,5 @@
 source :rubygems
 
-gem 'haml'
+gem 'erb'
 gem 'sinatra'
 gem 'google-weather'
