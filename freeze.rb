@@ -9,23 +9,29 @@ end
 
 post '/weather' do
 
-  begin
-    place = params[:place]
-    weather = GoogleWeather.new(place)
-    forecast = weather.forecast_conditions[0]
-    low = forecast.low.to_i
-
-  rescue NoMethodError
-    redirect '/'
-  end
-
-  if low <= 32
-    @title = "Yes"
-    @answer = "Yes, today's low is #{low}F"
-  else
-    @title = "No"
-    @answer = 'No'
-  end
+    begin
+      place = params[:place]
+      weather = GoogleWeather.new(place)
+      forecast = weather.forecast_conditions[0]
+      low = forecast.low.to_i
+      if low <= 32
+        @title = "Yes"
+        @answer = "Yes, today's low is #{low}F"
+      else
+        @title = "No"
+        @answer = 'No'
+      end
+      
+    rescue NoMethodError
+        if place.downcase == "hell"
+          @title = "Probably not"
+          @answer = "Probably not, but if the Cowboys won today... Yes and there is snow too!"
+          erb :weather
+        else
+          redirect '/'
+        end
+    end
+ 
   erb :weather
 end
 
