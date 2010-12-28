@@ -15,7 +15,6 @@ post '/weather' do
       forecast = weather.forecast_conditions[0]
       low = forecast.low.to_i
       if low <= 32
-        @title = "Yes"
         @answer = "Yes, today's low is #{low}F"
       else
         @title = "No"
@@ -24,7 +23,6 @@ post '/weather' do
       
     rescue NoMethodError
         if place.downcase == "hell"
-          @title = "Probably not"
           @answer = "Probably not, but if the Cowboys won today... Yes and there is snow too!"
           erb :weather
         else
