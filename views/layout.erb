@@ -4,6 +4,78 @@
 	<title> <%= @title %> </title>
     <link href="/style.css", media="screen", rel="stylesheet", type="text/css">
     <link href = 'http://fonts.googleapis.com/css?family=Ubuntu', rel='stylesheet', :type ='text/css'>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/base/jquery-ui.css" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script> 
+    <style>
+	.ui-autocomplete-loading { background: white url('images/ui-anim_basic_16x16.gif') right center no-repeat; }
+	#city { width: 25em; }
+	</style>
+	<script>
+	function dump(arr,level) {
+	var dumped_text = "";
+	if(!level) level = 0;
+	
+	//The padding given at the beginning of the line.
+	var level_padding = "";
+	for(var j=0;j<level+1;j++) level_padding += "    ";
+	
+	if(typeof(arr) == 'object') { //Array/Hashes/Objects 
+		for(var item in arr) {
+			var value = arr[item];
+			
+			if(typeof(value) == 'object') { //If it is an array,
+				dumped_text += level_padding + "'" + item + "' ...\n";
+				dumped_text += dump(value,level+1);
+			} else {
+				dumped_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+			}
+		}
+	} else { //Stings/Chars/Numbers etc.
+		dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
+	}
+	return dumped_text;
+}
+	$(function() {
+		$( "#place" ).autocomplete({
+			source: function( request, response ) {
+				$.ajax({
+					url: "http://ws.geonames.org/searchJSON",
+					dataType: "jsonp",
+					data: {
+						country: "US",
+						featureClass: "P",
+						style: "full",
+						maxRows: 12,
+						name_startsWith: request.term
+					},
+					success: function( data ) {
+						response( $.map( data.geonames, function( item ) {
+							return {
+								label: item.name + (item.adminName1 ? ", " + item.adminName1 : ""),
+								// " + item.countryName,
+								value: item.name
+							}
+						}));
+					}
+				});
+			},
+			minLength: 2,
+			select: function( event, ui ) {
+				$("input#place").val(ui.item.label);
+				return false;
+				alert(dump(ui.item));
+			},
+			open: function() {
+				$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+			},
+			close: function() {
+				$( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+			}
+		});
+	});
+	</script>
+
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -17,7 +89,7 @@
 	  })();
 
 	</script>
-  </head>
+ </head>
   <body>
     <div id="container">
       <%= yield %>

@@ -19,7 +19,7 @@ post '/weather' do
         @answer = "Yes, today's low is #{low}F"
       else
         @title = "No"
-        @answer = 'No'
+        @answer = "No, today's low is #{low}F"
       end
       
     rescue NoMethodError
