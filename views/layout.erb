@@ -3,7 +3,7 @@
   <head>
 	<title>Will it freeze tonight?</title>
     <meta name="HandheldFriendly" content="true" />
-    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width; height=device-height; user-scalable=0; initial-scale=1.0;" />
     <link href="/style.css", media="screen", rel="stylesheet", type="text/css">
     <link href = 'http://fonts.googleapis.com/css?family=Ubuntu', rel='stylesheet', :type ='text/css'>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/base/jquery-ui.css" type="text/css" />
@@ -14,8 +14,6 @@
 	#city { width: 25em; }
 	</style>
 	<script>
-(function(){var e=typeof window.orientation=="number"&&typeof window.onorientationchange=="object",f=document.body.parentNode;function c(){c=e?function(){var d=window.orientation;switch(d){case 90:case -90:d="landscape";break;default:d="portrait"}f.setAttribute("class",d)}:function(){f.setAttribute("class",window.innerWidth>window.innerHeight?"landscape":"portrait")};c()}window.addEventListener("DOMContentLoaded",function(){c();e?window.addEventListener("orientationchange",c,false):setInterval(c,5E3)},false)})(); 
-
 	$(function() {
 		$( "#place" ).autocomplete({
 			source: function( request, response ) {
