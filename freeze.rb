@@ -11,7 +11,6 @@ end
 enable :sessions
 
 post '/weather' do
-
     begin
       place = params[:place]
       weather = GoogleWeather.new(place)
@@ -32,7 +31,6 @@ post '/weather' do
           redirect '/'
         end
     end
- 
   erb :weather
 end
 
