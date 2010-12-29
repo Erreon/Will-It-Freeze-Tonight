@@ -1,5 +1,17 @@
-<div class="center"> 
-  <%= @answer %>
+<div class="center">
+  <% if @hell %>
+    <h1><%= @hell %><h1>
+  <% else %>
+    <div class="answer">
+      <% if @low <= 32 %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </div>
+    <div class="today">today's low is</div>
+    <div class="low"><%= @low %>&#176;F</div>
+  <% end %>
 </div>
 
 <span class="right"><a href="/">Click here to ask about another city</a></span>

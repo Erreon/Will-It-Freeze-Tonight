@@ -1,4 +1,3 @@
-<script>
 $(function() {
 	$( "#place" ).autocomplete({
 		source: function( request, response ) {
@@ -37,4 +36,3 @@ $(function() {
 		}
 	});
 });
-</script>
