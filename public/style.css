@@ -56,5 +56,6 @@ margin: 0 !important;
 	margin-right: auto;
 	}
 .go_home { text-align: center; }
+#container { margin-right: auto; margin-left: auto; width: 320px;}
 input[type="text"] { border: 1px solid black; display: block;}
 }
