@@ -14,9 +14,9 @@ h1 { font-size: 60px; font-family: ubuntu;}
 /* Mobile stuff */
 
 @media screen and (max-device-width: 480px) {
+* { margin: 0; border: 0; padding: 0; }
 body {
 -webkit-text-size-adjust: 0;
-margin: 0; border: 0; padding: 0;
 }
 div {
 clear: both !important;
