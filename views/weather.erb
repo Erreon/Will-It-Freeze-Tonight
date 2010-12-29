@@ -1,9 +1,17 @@
-<div class="center"> 
-    <% if @low <= 32 %>
-      <div class='answer'>Yes</div><div class='today'>today's low is</div><div class='low'><%= @low %>&#176;F</div>
-    <% else %>
-      <div class='answer'>No</div><div class='today'>today's low is</div><div class='low'><%= @low %>&#176;F</div>
-    <% end %>  
+<div class="center">
+  <% if @hell %>
+    <h1><%= @hell %><h1>
+  <% else %>
+    <div class="answer">
+      <% if @low <= 32 %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </div>
+    <div class="today">today's low is</div>
+    <div class="low"><%= @low %>&#176;F</div>
+  <% end %>
 </div>
 
-<div class="go_home"><a href="/">Click here to ask about another city</a></div>
+<div class="right"><a href="/">Click here to ask about another city</a></div>
