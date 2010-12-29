@@ -29,5 +29,6 @@ margin: 0 !important;
 #container { width: 320px; }
 .go_home { text-align: center; }
 input[type="text"] { border: 1px solid black; display: block;}
-
+.portrait body div { width: 10%; }  
+.landscape body div { width: 15%; }  
 }

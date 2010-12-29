@@ -14,6 +14,7 @@
 	#city { width: 25em; }
 	</style>
 	<script>
+(function(){var e=typeof window.orientation=="number"&&typeof window.onorientationchange=="object",f=document.body.parentNode;function c(){c=e?function(){var d=window.orientation;switch(d){case 90:case -90:d="landscape";break;default:d="portrait"}f.setAttribute("class",d)}:function(){f.setAttribute("class",window.innerWidth>window.innerHeight?"landscape":"portrait")};c()}window.addEventListener("DOMContentLoaded",function(){c();e?window.addEventListener("orientationchange",c,false):setInterval(c,5E3)},false)})(); 
 
 	$(function() {
 		$( "#place" ).autocomplete({
