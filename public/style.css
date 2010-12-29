@@ -9,3 +9,4 @@ h1 { font-size: 60px; font-family: ubuntu;}
 .answer { font-size: 120px; font-family: ubuntu; font-weight: bold;}
 .today { font-size: 45px; font-family: ubuntu;}
 .low { font-size: 65px; font-family: ubuntu; font-weight: bold;}
+.right { text-align: right;}
