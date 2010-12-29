@@ -2,7 +2,7 @@
 .center { text-align: center }
 #question { height: 50px; width: 720px; margin-top: 40px;}
 .will_freeze { font-size: 40px; font-family: ubuntu; padding-top: 10px;}
-.text_input {font-family: ubuntu; font-size: 60px; height: 30px; width: 240px; }
+.text_input {font-family: ubuntu; font-size: 60px; height: 30px; width: 250px; }
 h1 { font-size: 60px; font-family: ubuntu;}
 
 #flash { text-align: center; color: red;}
