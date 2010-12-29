@@ -8,7 +8,7 @@ the app pulls the forecasts info in and displays a message according to the answ
 
 = Plead:
 
-Please by all means email me at jcarpentier @ gmail.com and give me feedback, ideas, helpful critic, pointers or whatever.  
+Please by all means email me at jcarpentier@gmail.com and give me feedback, ideas, helpful critic, pointers or whatever.  
 Also add me on twitter @JasonCarpentier and let me know what you think.  I'm still learning and would love helpful feedback.
 
 = Warning:
@@ -18,10 +18,10 @@ You're very welcome to read it and learn how not to write Ruby code.
 = What I used:
 Ruby
 == Gems
-Sinatra
-Sinatra-Flash
-Google-Weather
-Erubis
+* Sinatra
+* Sinatra-Flash
+* Google-Weather
+* Erubis
 
 = License:
 
