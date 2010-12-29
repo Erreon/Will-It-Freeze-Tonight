@@ -18,9 +18,9 @@ post '/weather' do
       forecast = weather.forecast_conditions[0]
       low = forecast.low.to_i
       if low <= 32
-        @answer = "<div class='answer'>Yes</div><div class='today'>today's low is</div><div class='low'>#{low}F</div>"
+        @answer = "<div class='answer'>Yes</div><div class='today'>today's low is</div><div class='low'>#{low}&#176;F</div>"
       else
-        @answer = "<div class='answer'>No</div><div class='today'>today's low is</div><div class='low'>#{low}F</div>"
+        @answer = "<div class='answer'>No</div><div class='today'>today's low is</div><div class='low'>#{low}&#176;F</div>"
       end
       
     rescue NoMethodError
