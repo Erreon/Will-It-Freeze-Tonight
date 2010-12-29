@@ -39,7 +39,7 @@ div {
 clear: both !important;
 float: none !important;
 width: 320px !important;
-padding: 0 !important;
+padding: 50 !important;
 margin: 0 !important;
 }
 .text_input {font-family: ubuntu; height: 30px; width: 250px; margin-left: auto; margin-right: auto;}
