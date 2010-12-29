@@ -9,14 +9,14 @@ h1 { font-size: 60px; font-family: ubuntu;}
 .answer { font-size: 120px; font-family: ubuntu; font-weight: bold;}
 .today { font-size: 45px; font-family: ubuntu;}
 .low { font-size: 65px; font-family: ubuntu; font-weight: bold;}
-.right { text-align: right;}
+.go_home { text-align: right;}
 
 /* Mobile stuff */
 
 @media screen and (max-device-width: 480px) {
 * { margin: 0; border: 0; padding: 0; }
 body {
--webkit-text-size-adjust: none;
+-webkit-text-size-adjust: 80%;
 }
 div {
 clear: both !important;
@@ -26,4 +26,5 @@ padding: 0 !important;
 margin: 0 !important;
 }
 #container { width: 320px; margin: 0 0 0 5px !important; }
+.go_home { text-align: center;}
 }
