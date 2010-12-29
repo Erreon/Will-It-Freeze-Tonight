@@ -1,6 +1,6 @@
-#container { width: 640px; margin-right: auto; margin-left: auto; }
+#container { width: 960px; margin-right: auto; margin-left: auto; }
 .center { text-align: center }
-#question { height: 50px; width: 720px; margin-top: 40px;}
+#question { height: 50px; width: 960px; margin-top: 40px;}
 .will_freeze { font-size: 40px; font-family: ubuntu; padding-top: 10px;}
 .text_input {font-family: ubuntu; font-size: 60px; height: 30px; width: 250px; }
 h1 { font-size: 60px; font-family: ubuntu;}
