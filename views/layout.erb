@@ -37,6 +37,7 @@
 	}
 	return dumped_text;
 }
+$(document).ready(function() { if (!("autofocus" in document.createElement("input"))) { $("#place").focus(); }
 	$(function() {
 		$( "#place" ).autocomplete({
 			source: function( request, response ) {

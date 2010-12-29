@@ -25,6 +25,6 @@ width: 320px !important;
 padding: 0 !important;
 margin: 0 !important;
 }
-#container { width: 320px; margin: 0 0 0 5px !important; }
-.go_home { text-align: center;}
+#container { width: 320px; }
+.go_home { text-align: center; }
 }
