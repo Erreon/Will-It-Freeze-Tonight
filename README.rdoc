@@ -1,0 +1,13 @@
+= Description:
+
+This is just a fun little app I put together to exercise my brain.  
+
+When someone visits the site they're greeted with "Will it freeze in _____________ tonight?" They fill the textfield in with the city, state
+(autocomplete is enabled for most places in the US using jquery autocomplete and ws.geonames.org) or zipcode.  Using @jnunemakers gem google-weather 
+the app pulls the forecasts info in and displays a message according to the answer.  It's really simple and there are a lot more things I want to add to it.
+
+
+= Warning:
+It currently needs refactoring and I'm working on that daily as I learn more and more about Ruby.  
+You're very welcome to read it and learn how not to write Ruby code.
+
