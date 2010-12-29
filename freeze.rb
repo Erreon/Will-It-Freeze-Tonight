@@ -28,7 +28,7 @@ post '/weather' do
           @answer = "Probably not, but if the Cowboys won today... Yes and there is snow too!"
           erb :weather
         else
-          flash[:warning] = "Either this place doesn't exist or we don't have access to weather info there.  Try searching for a near by town or zipcode."
+          flash[:warning] = "Either this place doesn't exist or we don't have access to weather info there.  Try searching for a nearby town or zipcode."
           redirect '/'
         end
     end
