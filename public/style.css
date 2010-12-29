@@ -10,3 +10,19 @@ h1 { font-size: 60px; font-family: ubuntu;}
 .today { font-size: 45px; font-family: ubuntu;}
 .low { font-size: 65px; font-family: ubuntu; font-weight: bold;}
 .right { text-align: right;}
+
+/* Mobile stuff */
+
+@media screen and (max-device-width: 480px) {
+* { margin: 0; border: 0; padding: 0; }
+body {
+-webkit-text-size-adjust: none;
+}
+div {
+clear: both !important;
+float: none !important;
+width: 320px !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+}
