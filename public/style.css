@@ -4,3 +4,8 @@
 .will_freeze { font-size: 40px; font-family: ubuntu; padding-top: 10px;}
 .text_input {font-family: ubuntu; height: 30px; width: 250px; }
 h1 { font-size: 60px; font-family: ubuntu;}
+
+#flash { text-align: center; color: red;}
+.answer { font-size: 120px; font-family: ubuntu; font-weight: bold;}
+.today { font-size: 45px; font-family: ubuntu;}
+.low { font-size: 65px; font-family: ubuntu; font-weight: bold;}

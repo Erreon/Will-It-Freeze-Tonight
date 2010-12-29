@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/flash'
 require 'google_weather'
 require 'erb'
 
@@ -6,6 +7,8 @@ get '/' do
   @title = "WillItFreezeTonight.com"
   erb :index
 end
+
+enable :sessions
 
 post '/weather' do
 
@@ -15,10 +18,9 @@ post '/weather' do
       forecast = weather.forecast_conditions[0]
       low = forecast.low.to_i
       if low <= 32
-        @answer = "Yes, today's low is #{low}F"
+        @answer = "<div class='answer'>Yes</div><div class='today'>today's low is</div><div class='low'>#{low}F</div>"
       else
-        @title = "No"
-        @answer = "No, today's low is #{low}F"
+        @answer = "<div class='answer'>No</div><div class='today'>today's low is</div><div class='low'>#{low}F</div>"
       end
       
     rescue NoMethodError
@@ -26,6 +28,7 @@ post '/weather' do
           @answer = "Probably not, but if the Cowboys won today... Yes and there is snow too!"
           erb :weather
         else
+          flash[:warning] = "Either this place doesn't exist or we don't have access to weather info there.  Try searching for a near by town or zipcode."
           redirect '/'
         end
     end
