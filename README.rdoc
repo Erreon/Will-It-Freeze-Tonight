@@ -15,6 +15,14 @@ Also add me on twitter @JasonCarpentier and let me know what you think.  I'm sti
 It currently needs refactoring and I'm working on that daily as I learn more and more about Ruby.  
 You're very welcome to read it and learn how not to write Ruby code.
 
+= What I used:
+Ruby
+== Gems
+Sinatra
+Sinatra-Flash
+Google-Weather
+Erubis
+
 = License:
 
 This app has been released under the MIT-LICENSE you can read it in the file MIT-LICENSE.txt
