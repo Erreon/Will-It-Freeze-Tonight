@@ -14,9 +14,9 @@ h1 { font-size: 60px; font-family: ubuntu;}
 /* Mobile stuff */
 
 @media screen and (max-device-width: 480px) {
-* { margin: 0; border: 0; padding: 0; }
 body {
 -webkit-text-size-adjust: 0;
+margin: 0; border: 0; padding: 0;
 }
 div {
 clear: both !important;
@@ -36,3 +36,25 @@ margin: 0 !important;
 input[type="text"] { border: 1px solid black; display: block;}
 }
 
+@media screen and (max-device-width: 800px) {
+body {
+-webkit-text-size-adjust: 0;
+margin: 0; border: 0; padding: 0;
+}
+div {
+clear: both !important;
+float: none !important;
+width: 800px !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+.text_input { 
+	font-family: ubuntu; 
+	height: 30px; 
+	width: 250px; 
+	margin-left: auto; 
+	margin-right: auto;
+	}
+.go_home { text-align: center; }
+input[type="text"] { border: 1px solid black; display: block;}
+}
