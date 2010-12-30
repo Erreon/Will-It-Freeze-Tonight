@@ -10,7 +10,7 @@ h1 { font-size: 60px; font-family: ubuntu;}
 .today { font-size: 45px; font-family: ubuntu;}
 .low { font-size: 65px; font-family: ubuntu; font-weight: bold;}
 .go_home { text-align: right;}
-
+.fb_like { padding-top: 5px; text-align: right;}
 /* Mobile stuff */
 
 @media screen and (max-device-width: 480px) {
