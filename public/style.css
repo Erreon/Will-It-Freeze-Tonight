@@ -55,6 +55,7 @@ margin: 0 !important;
 	margin-left: auto !important!; 
 	margin-right: auto !important!;
 	}
+.fb_like { display: none;}
 .go_home { text-align: center; }
 #container { margin-right: auto !important!; margin-left: auto !important!; width: 320px !important!;}
 input[type="text"] { border: 1px solid black !important!; display: block !important!;}
