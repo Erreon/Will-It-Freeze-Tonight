@@ -15,7 +15,6 @@ $(function() {
 					response( $.map( data.geonames, function( item ) {
 						return {
 							label: item.name + (item.adminName1 ? ", " + item.adminName1 : ""),
-							// " + item.countryName,
 							value: item.name
 						}
 					}));
@@ -36,3 +35,55 @@ $(function() {
 		}
 	});
 });
+
+function dump(arr,level) {
+	var dumped_text = "";
+	if(!level) level = 0;
+	
+	//The padding given at the beginning of the line.
+	var level_padding = "";
+	for(var j=0;j<level+1;j++) level_padding += "    ";
+	
+	if(typeof(arr) == 'object') { //Array/Hashes/Objects 
+		for(var item in arr) {
+			var value = arr[item];
+			
+			if(typeof(value) == 'object') { //If it is an array,
+				dumped_text += level_padding + "'" + item + "' ...\n";
+				dumped_text += dump(value,level+1);
+			} else {
+				dumped_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
+			}
+		}
+	} else { //Stings/Chars/Numbers etc.
+		dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
+	}
+	return dumped_text;
+}
+
+if (!Modernizr.geolocation) {
+	$("findLocation").hide()
+	} else
+	{
+	$(document).ready(function(){
+	  $("#findLocation").click(init_geolocation);
+	});
+
+	function init_geolocation(){
+		navigator.geolocation.getCurrentPosition(handle_geolocation_query);
+	}
+
+	function handle_geolocation_query(position){
+		$.ajax({
+		  url: "http://ws.geonames.org/findNearbyPostalCodesJSON",
+		  dataType: "json",
+		  data: {
+			lat: position.coords.latitude,
+			lng: position.coords.longitude
+		},
+		success: function( data ) {
+			$("input#place").val(data.postalCodes[0].placeName + ', ' + data.postalCodes[0].adminName1)
+		}	
+		});
+	}
+}
