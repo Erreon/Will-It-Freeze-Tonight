@@ -61,11 +61,11 @@ function dump(arr,level) {
 	return dumped_text;
 }
 
-if (!Modernizr.geolocation) {
-	$("findLocation").hide()
-	} else
-	{
+if (Modernizr.geolocation) {
+ 
+
 	$(document).ready(function(){
+      $("#locationButton").html("<button id=\"findLocation\">Use your location</button>");
 	  $("#findLocation").click(init_geolocation);
 	});
 
