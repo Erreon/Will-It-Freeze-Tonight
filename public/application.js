@@ -82,7 +82,7 @@ if (Modernizr.geolocation) {
 			lng: position.coords.longitude
 		},
 		success: function( data ) {
-			$("input#place").val(data.postalCodes[0].placeName + ', ' + data.postalCodes[0].adminName1)
+			$("input#place").val(data.postalCodes[0].placeName + ', ' + data.postalCodes[0].adminName1 + ', ' + data.postalCodes[0].postalCode );
 		}	
 		});
 	}

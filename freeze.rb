@@ -28,6 +28,10 @@ post '/weather' do
   erb :weather
 end
 
+get '/:city' do
+  
+end
+
 not_found do
   redirect '/'
 end
